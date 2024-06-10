@@ -67,10 +67,11 @@
       /* 16:9 */
       height: 0;
       overflow: hidden;
-      width: 100%;
+      max-width: 100%;
+      background: #000;
     }
 
-    .video-wrapper video {
+    .video-wrapper iframe {
       position: absolute;
       top: 0;
       left: 0;
@@ -110,7 +111,8 @@
         <li><a href="#activities" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Activités
               Réalisées</span></a></li>
         <li><a href="#about" class="nav-link scrollto"><i class="bx bx-info-circle"></i> <span>Profil</span></a></li>
-        <li><a href="#services" class="nav-link scrollto"><i class="bx bx-shield"></i> <span>Engagements</span></a></li>
+        <li><a href="#engagement" class="nav-link scrollto"><i class="bx bx-shield"></i> <span>Engagements</span></a>
+        </li>
         <li><a href="#portfolio" class="nav-link scrollto"><i
               class="bx bx-book-content"></i><span>Publications</span></a></li>
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
@@ -123,8 +125,8 @@
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>John Herrick DESSOURCES</h1>
-      <p>Je suis <span class="typed"
-          data-typed-items="Planificateur-Economiste ,Politicien, Entrepreneur, Activiste"></span></p>
+      <p>Je suis <span class="typed" data-typed-items="Planificateur-Economiste ,Citoyen engagé, Entrepreneur"></span>
+      </p>
     </div>
   </section><!-- End Hero -->
 
@@ -135,30 +137,28 @@
 
         <div class="activities-container">
           <button class="nav-btn prev-btn" onclick="showPreviousActivity()">◀</button>
-          <div class="activity active"><img src="assets/img/portfolio/portfolio-1.jpg" alt="Activity 1"
-              class="img-fluid">
+          <div class="activity active">
+            <div class="video-wrapper">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/0q2_q3dPPsg" frameborder="0" allowfullscreen></iframe>
+            </div>
             <h3>Activité 1</h3>
-            <p>Description de l'activité 1.</p>
+            <p>Le Directeur Exécutif de l'Agence d'Investissement et de Développement d'Entreprises (AIDE) partage dix informations importantes sur la première édition du projet CHAMPIONS. C'est un programme d'accompagnement pour le renforcement des capacités des MPME. La première cohorte réunit des femmes et jeunes entrepreneurs du Grand Nord.</p>
           </div>
           <button class="nav-btn next-btn" onclick="showNextActivity()">▶</button>
-          <div class="activity"><img src="assets/img/portfolio/portfolio-2.jpg" alt="Activity 2" class="img-fluid">
-            <h3>Activité 2</h3>
-            <p>Description de l'activité 2.</p>
-          </div>
-          <div class="activity embed-responsive embed-responsive-16by9">
+          <div class="activity">
             <div class="video-wrapper">
-              <video controls>
-                <source src="assets/img/act.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/qYB_awIR9-M" frameborder="0" allowfullscreen></iframe>
             </div>
-            <div class="activity-content">
-              <h3>Activité 3</h3>
-              <p>Description de l'activité 3.</p>
-            </div>
-            <button class="nav-btn next-btn" onclick="showNextActivity()">▶</button>
+            <h3>Activité 2</h3>
+            <p>Le président de l’Agence d’Investissement et de Développement d’Entreprise John Herrick Dessources renouvelle son engagement de travailler pour la création d’entreprise durable et de richesse.
+              Un groupe de 2 cent entrepreneurs du secteur productif dans le nord et le nord-est du pays bénéficieront d’un appui spécial dans la mise en œuvre de ce protocole.
+              Suivez les déclarations du président de AIDE John  Herrick Dessources…</p>
+           
           </div>
         </div>
+      </div>
+      
+      </div>
     </section>
 
 
@@ -197,9 +197,9 @@
 
         <div class="section-title">
           <h2>Profil</h2>
-          <p>Planificateur-Economiste Spécialisé en Économie du Développement</p>
+          <p><em><b>Planificateur-Economiste Spécialisé en Économie du Développement</b></em></p>
           <p>
-            Expert en Planification Économique et Développement d'Entreprises
+            <em><b>Expert en Planification Économique et Développement d'Entreprises</b></em>
           </p>
         </div>
 
@@ -208,56 +208,43 @@
             <img src="assets/img/dessources.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <!-- <h3>UI/UX Designer &amp; Web Developer.</h3> -->
-            <!-- <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore
-              magna aliqua.
-            </p> -->
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456 7890</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York, USA</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>email@example.com</span>
-                  </li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
-              </div>
-            </div>
+
+
             <p>
-
-
+              Professionnel expérimenté avec une solide expertise en planification économique, développement
+              d'entreprises et économie du développement. Fort de plusieurs années d'expérience dans le domaine, je
+              possède une compréhension approfondie des dynamiques économiques locales et internationales.
             </p>
-            <p>Planificateur-Economiste avec une solide expérience et des compétences en planification économique,
-              développement d’entreprises, et économie du développement. Actuellement en cours de spécialisation en
-              économie du développement, je suis compétent dans la formulation, le suivi et l'évaluation de projets.
-              Expert dans l’analyse économique, je suis capable de fournir des solutions stratégiques pour favoriser le
-              développement durable et la croissance économique.
-
+            <p>
+              Actuellement, je suis en cours de spécialisation en économie du développement, ce qui me permet d'élargir
+              et de renforcer mes compétences dans ce domaine essentiel. Mon parcours m'a permis de maîtriser la
+              formulation, le suivi et l'évaluation de projets économiques complexes. Je suis particulièrement compétent
+              dans l'analyse économique, capable de disséquer les données pour fournir des solutions stratégiques
+              innovantes et efficaces
+            </p>
+            <p>
+              Mon expérience inclut la collaboration avec des équipes multidisciplinaires pour développer des plans de
+              croissance économique durable, ainsi que la mise en œuvre de stratégies de développement visant à
+              améliorer la qualité de vie des communautés. J'ai également travaillé sur des projets internationaux, ce
+              qui m'a donné une perspective globale et une capacité à adapter des solutions aux contextes locaux variés.
+            </p>
+            <p>
+              Expert en évaluation de politiques économiques et en gestion de projets, je suis capable d'identifier les
+              opportunités et les défis économiques, et de proposer des recommandations pour optimiser les ressources et
+              maximiser les impacts positifs. Mon approche est axée sur la durabilité, avec un engagement fort envers
+              les pratiques de développement durable.
+            </p>
+            <p>
+              En résumé, je suis un planificateur-économiste dynamique et orienté vers les résultats, prêt à apporter
+              mes compétences et mon expertise à des projets visant à favoriser la croissance économique et le
+              développement durable.
             </p>
           </div>
         </div>
 
       </div>
     </section><!-- End About Section
- 
-
-
-
-
-
-
-   
-    <!-- ======= Skills Section ======= -->
+ <!-- ======= Skills Section ======= -->
     <section id="skills" class="skills section-bg">
       <div class="container">
 
@@ -336,31 +323,9 @@
     <section id="resume" class="resume">
       <div class="container">
 
-        <div class="section-title">
-          <h2>Resume</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-            sit
-            in iste officiis commodi quidem hic quas.</p>
-        </div>
-
         <div class="row">
-          <h3 class="resume-title">Education</h3>
+          <h3 class="resume-title">Formations</h3>
           <div class="col-lg-6" data-aos="fade-up">
-            <!-- <h3 class="resume-title">Sumary</h3>
-            <div class="resume-item pb-0">
-              <h4>John Herrick DESSOURCES</h4>
-              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and
-                  developing user-centered digital/print marketing material from initial concept to final, polished
-                  deliverable.</em></p>
-              <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
-              </ul>
-            </div> -->
-
-            
             <div class="resume-item">
               <h4>Maitrise en Sciences économiques/ Spécialité : Economie du développement</h4>
               <!-- <h4>Master of Fine Arts &amp; Graphic Design</h4> -->
@@ -391,7 +356,7 @@
 
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          
+
             <div class="resume-item">
               <h4>Etudes secondaires</h4>
               <h5>1997 – 2003 </h5>
@@ -414,54 +379,39 @@
     </section><!-- End Resume Section -->
     <section id="resume" class="resume">
       <div class="container">
-
-
-
         <div class="row">
-          <h3 class="resume-title">Professional Experience</h3>
+          <h3 class="resume-title">Experiences Professionnelles</h3>
           <div class="col-lg-6" data-aos="fade-up">
-            <!-- <h3 class="resume-title">Sumary</h3>
-            <div class="resume-item pb-0">
-              <h4>John Herrick DESSOURCES</h4>
-              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and
-                  developing user-centered digital/print marketing material from initial concept to final, polished
-                  deliverable.</em></p>
-              <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
-              </ul>
-            </div> -->
-
-          
-
             <div class="resume-item">
               <p><em>Plus de quinze (15) années d’expérience professionnelle dans le domaine de la Planification.</em>
               </p>
             </div>
             <div class="resume-item">
-              <p><em>Quinze (15) années d’expérience en <b>conception, analyse, suivi et évaluation de projets.</b> </em></p>
+              <p><em>Quinze (15) années d’expérience en <b>conception, analyse, suivi et évaluation de projets.</b>
+                </em></p>
             </div>
             <div class="resume-item">
               <p><em> Plus de dix (10) années cumulées d’expérience comme Coordonnateur de projets.</em></p>
             </div>
             <div class="resume-item">
               <p><em>Douze (12) années d’expérience dans la mise en œuvre de programmes<b> de développement du secteur
-                  privé, d’accompagnement et de développement d’entreprises.</b> </em></p>
+                    privé, d’accompagnement et de développement d’entreprises.</b> </em></p>
             </div>
             <div class="resume-item">
-              <p><em>Plus de quinze (15) années <b>de travail avec les institutions publiques</b>  dont huit (8) années cumulées
+              <p><em>Plus de quinze (15) années <b>de travail avec les institutions publiques</b> dont huit (8) années
+                  cumulées
                   d’expérience <b>de travail au sein de l’administration publique haïtienne.</b></em></p>
             </div>
             <div class="resume-item">
-              <p><em>Plus de six (6) années d’expérience <b>dans la gestion de projets publics</b>, financés par les bailleurs
+              <p><em>Plus de six (6) années d’expérience <b>dans la gestion de projets publics</b>, financés par les
+                  bailleurs
                   internationaux (Banque Interaméricaine de Développement, Banque Mondiale, Union Européenne) et par le
                   Programme des Investissements Publics (PIP).</em></p>
             </div>
             <div class="resume-item">
               <p><em>Plus cinq (5) années d’expérience comme consultant <b>en développement d’entreprises : Etudes de
-                  faisabilité, conception de modèles d’affaires, formulation de plans d’affaires, analyse de marchés,
-                  formation. Coaching.</b>
+                    faisabilité, conception de modèles d’affaires, formulation de plans d’affaires, analyse de marchés,
+                    formation. Coaching.</b>
 
                 </em></p>
             </div>
@@ -495,39 +445,50 @@
                   Septembre 2016 – Mai 2024</em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Consultant en Suivi, Evaluation, Redevabilité et Apprentissage (SERA)</b> du Programme de renforcement
+              <p><em><b>Consultant en Suivi, Evaluation, Redevabilité et Apprentissage (SERA)</b> du Programme de
+                  renforcement
                   des filets de sécurité pour les populations vulnérables (HA-J0005) mis en œuvre par CARE/FAES avec un
                   financement de la BID. A travers AIDE. Depuis Mai 2024</em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Consultant en évaluation de projet</b>, mission d’évaluation d’impacts sur le projet HEFSRP (Nord-Est
+              <p><em><b>Consultant en évaluation de projet</b>, mission d’évaluation d’impacts sur le projet HEFSRP
+                  (Nord-Est
                   et Centre) de CARE Haïti à travers un consortium de trois (3) firmes : AIDE, Max Consulting et GAADE.
                   Octobre 2023-Mai 2024</em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Consultant pour la formulation de Stratégie </b>de réponse à la crise humanitaire en Haïti. Vision pour
+              <p><em><b>Consultant pour la formulation de Stratégie </b>de réponse à la crise humanitaire en Haïti.
+                  Vision pour
                   Haïti et pour le Monde (VIHAMO). 18 Millions de dollars américains. Juillet-Décembre 2023 </em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Consultant en évaluation de projets</b>, Evaluation finale du Programme de Coopération Volontaire (PCV)
+              <p><em><b>Consultant en évaluation de projets</b>, Evaluation finale du Programme de Coopération
+                  Volontaire (PCV)
                   mis en œuvre par CECI. Juillet - Septembre 2023 </em></p>
             </div>
-            
+
             <div class="resume-item">
-              <p><em><b>Consultant en évaluation de projets</b>, Evaluation finale du Programme de Coopération Volontaire (PCV)
+              <p><em><b>Consultant en évaluation de projets</b>, Evaluation finale du Programme de Coopération
+                  Volontaire (PCV)
                   mis en œuvre par CECI. Juillet - Septembre 2023 </em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Consultant en développement d’entreprises</b>, à travers AIDE, Coordination du projet Formalisation et
+              <p><em><b>Consultant en développement d’entreprises</b>, à travers AIDE, Coordination du projet
+                  Formalisation et
                   Accompagnement (FORA) qui appuie le renforcement et la formalisation de 1300 entreprises du secteur
                   productif en Haïti. Depuis Avril 2023 </em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Consultant – Formateur</b>, Conception et animation d’un programme de formation en formulation et gestion de projets au profit de 300 Organisations Communautaires de Base (OCB) travaillant dans certains quartiers défavorisés et à risque de l’Ouest (Carrefour-feuilles et Canaan) et du Nord (Petite Anse et Bas Ravine). Cette mission rentre dans le cadre du projet AVA mis en route par Mercy Corps et l’organisation AIDE CANADA. Aout 2022 – Décembre 2022 </em></p>
+              <p><em><b>Consultant – Formateur</b>, Conception et animation d’un programme de formation en formulation
+                  et gestion de projets au profit de 300 Organisations Communautaires de Base (OCB) travaillant dans
+                  certains quartiers défavorisés et à risque de l’Ouest (Carrefour-feuilles et Canaan) et du Nord
+                  (Petite Anse et Bas Ravine). Cette mission rentre dans le cadre du projet AVA mis en route par Mercy
+                  Corps et l’organisation AIDE CANADA. Aout 2022 – Décembre 2022 </em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Consultant en gestion de projets, Expert principal en appui à l’Ecole Hôtelière d’Haïti (EHH) et au
-                  Ministère du Tourisme (MT)</b>, à travers AIDE, sur le projet d’amélioration de l’enseignement et de
+              <p><em><b>Consultant en gestion de projets, Expert principal en appui à l’Ecole Hôtelière d’Haïti (EHH) et
+                    au
+                    Ministère du Tourisme (MT)</b>, à travers AIDE, sur le projet d’amélioration de l’enseignement et de
                   promotion de l’entreprenariat dans les métiers du tourisme, de l’hôtellerie et de la restauration
                   (Projet baptisé Standardisation de l’Enseignement du Tourisme : SET). Depuis Juillet 2022 </em></p>
             </div>
@@ -537,18 +498,21 @@
                   jeunes et femmes entrepreneurs dans le secteur productif. Avril 2021 – Mars 2022 </em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Consultant en développement d’entreprises</b>, à travers AIDE, Appui coaching à l’entreprise RAMUS qui
+              <p><em><b>Consultant en développement d’entreprises</b>, à travers AIDE, Appui coaching à l’entreprise
+                  RAMUS qui
                   évolue dans la production d’objets artisanaux (sandales et sacs à main). Depuis Septembre 2020 </em>
               </p>
             </div>
             <div class="resume-item">
-              <p><em><b>Consultant en développement d’entreprises</b>, à travers AIDE, Formulation du plan d’affaires du projet
+              <p><em><b>Consultant en développement d’entreprises</b>, à travers AIDE, Formulation du plan d’affaires du
+                  projet
                   d’expansion de la plantation de moringa et de mise en place d’une usine de transformation de moringa
                   dans la Commune de Croix-des-Bouquets par l’entreprise DOLIV. Appui coaching à l’entreprise DOLIV.
                   Novembre 2020 </em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Consultant en développement d’entreprises</b>, à travers AIDE, Conception du modèle d’affaires pour la
+              <p><em><b>Consultant en développement d’entreprises</b>, à travers AIDE, Conception du modèle d’affaires
+                  pour la
                   mise en place d’une usine de transformation de manioc au sein de la ferme agroindustrielle de Roucou à
                   Limonade par la société AGRIFAZ SA. Septembre 2020 </em></p>
             </div>
@@ -560,20 +524,24 @@
                   (agribusiness) mis en œuvre par le MEF. </em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Consultant en développement d’entreprises</b>, à travers R and C Consulting Group, Audit de qualité,
+              <p><em><b>Consultant en développement d’entreprises</b>, à travers R and C Consulting Group, Audit de
+                  qualité,
                   diagnostic managérial de l’hôtel Oasis. Octobre 2019 – Décembre 2019 </em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Consultant – Formateur</b>, à travers AIDE, Séminaire de formation en montage d’entreprises pour un
+              <p><em><b>Consultant – Formateur</b>, à travers AIDE, Séminaire de formation en montage d’entreprises pour
+                  un
                   groupe de jeunes du Département de Artibonite à l’initiative de CIJ. Aout 2019</em></p>
             </div>
-           
+
             <div class="resume-item">
-              <p><em><b>Membre de l’équipe de formulation du projet</b> ATTEINDE avec MEDA. Financement de 12 Millions de
+              <p><em><b>Membre de l’équipe de formulation du projet</b> ATTEINDE avec MEDA. Financement de 12 Millions
+                  de
                   Dollars de l’USAID. 2019 </em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Consultant – Formateur, à travers AIDE</b>, Journée de formation pour un groupe d’entrepreneurs dans la
+              <p><em><b>Consultant – Formateur, à travers AIDE</b>, Journée de formation pour un groupe d’entrepreneurs
+                  dans la
                   Commune de Verrettes dans le cadre du renforcement de l’organisation Centre d’Inspiration Jeunesse
                   (CIJ). Janvier 2018 </em></p>
             </div>
@@ -582,7 +550,8 @@
                   Commerce et de l’Industrie (MCI). Nov. 2014 – Sept. 2020 </em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Coordonnateur du Programme de soutien au développement productif</b> (2416/GR-HA et GRT/HR-12410-HA) du
+              <p><em><b>Coordonnateur du Programme de soutien au développement productif</b> (2416/GR-HA et
+                  GRT/HR-12410-HA) du
                   Ministère du Commerce et de l’Industrie (MCI). Financement conjoint de 10.25 Millions de dollars
                   américains de la Banque Interaméricaine de Développement (BID) et la Banque Mondiale (BM).
                   2014-2020</em></p>
@@ -594,38 +563,44 @@
                   (BID). 2014-2020</em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Coordonnateur du Projet</b> d’Appui au Ministère du Commerce et de l’Industrie (PAMCI) – Volet Micro
+              <p><em><b>Coordonnateur du Projet</b> d’Appui au Ministère du Commerce et de l’Industrie (PAMCI) – Volet
+                  Micro
                   Parcs Industriels. Financement de l’Union Européenne (UE). 2014-2020</em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Coordonnateur du projet</b> de Mise en place d’activités de renforcement à la création et à la gestion
+              <p><em><b>Coordonnateur du projet</b> de Mise en place d’activités de renforcement à la création et à la
+                  gestion
                   des entreprises. Comme coordonnateur Général de l’Unité chargé de la Gestion des Micro Parcs au MCI.
                   Financement Programme des Investissements Publics (PIP). 2014-2020</em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Coordonnateur du projet</b> de Mise en place et Gestion de Micro Parcs et de Centrales d’achat et de
+              <p><em><b>Coordonnateur du projet</b> de Mise en place et Gestion de Micro Parcs et de Centrales d’achat
+                  et de
                   distribution. Comme coordonnateur Général de l’Unité chargé de la Gestion des Micro Parcs au MCI.
                   Financement Programme des Investissements Publics (PIP). 2014-2020</em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Membre d’équipe de formulation du projet</b> Mise en place et gestion des Micro Parcs et centrales
+              <p><em><b>Membre d’équipe de formulation du projet</b> Mise en place et gestion des Micro Parcs et
+                  centrales
                   d’achat et de distribution. Ministère du Commerce et de l’Industrie (MCI). 2014 </em></p>
             </div>
             <div class="resume-item">
               <p><em>
-                  <b>Membre d’équipe de formulation du projet </b>Mise en place d’activités de renforcement à la création et à
+                  <b>Membre d’équipe de formulation du projet </b>Mise en place d’activités de renforcement à la
+                  création et à
                   la gestion des entreprises. Financement du trésor public. Ministère du Commerce et de l’Industrie
                   (MCI). 2014
                 </em></p>
             </div>
             <div class="resume-item">
               <p><em>
-                 <b>Spécialiste d’opérations</b> , Développement du secteur privé (Marchés des capitaux et institutions
+                  <b>Spécialiste d’opérations</b> , Développement du secteur privé (Marchés des capitaux et institutions
                   financières), Banque Interaméricaine de Développement (BID). Jan. 2014 – Oct. 2014
                 </em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Membre d’équipe d’opérations</b> sur le Programme de Développement du secteur privé via la Promotion
+              <p><em><b>Membre d’équipe d’opérations</b> sur le Programme de Développement du secteur privé via la
+                  Promotion
                   des Investissements (2879/GR-HA). Supervision comme membre de l’équipe d’opération de la BID.
                   Collaboration avec l’Unité de Coordination de Projets du Ministère de l’Economie et des Finances
                   (UCP-MEF) le Centre de Développement des Entreprises et de l’Entreprenariat (CDEE) du MCI, le Centre
@@ -643,36 +618,43 @@
                 </em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Analyste Sénior de projets</b>, Développement du secteur privé (Marchés des capitaux et institutions
+              <p><em><b>Analyste Sénior de projets</b>, Développement du secteur privé (Marchés des capitaux et
+                  institutions
                   financières), Banque Interaméricaine de Développement (BID). Mar. 2012 – Déc. 2013
 
                 </em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Coordonnateur Général</b>, Bureau national, Futurenet Group Haïti. Sept. 2011 – Fév. 2012 </em></p>
+              <p><em><b>Coordonnateur Général</b>, Bureau national, Futurenet Group Haïti. Sept. 2011 – Fév. 2012 </em>
+              </p>
             </div>
             <div class="resume-item">
-              <p><em><b>Officier de suivi et d’évaluation de projets</b>, World Vision International. Mai 2010 - Mai 2011
+              <p><em><b>Officier de suivi et d’évaluation de projets</b>, World Vision International. Mai 2010 - Mai
+                  2011
 
                 </em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Coordonnateur ai</b>, Bureau de gestion des projets, Mairie de Port-au-Prince. Mai 2009 - Mai 2010
+              <p><em><b>Coordonnateur ai</b>, Bureau de gestion des projets, Mairie de Port-au-Prince. Mai 2009 - Mai
+                  2010
                 </em></p>
             </div>
             <div class="resume-item">
-              <p><em><b>Coordonnateur</b>, Bureau de liaison avec les ONG, Mairie de Port-au-Prince. Nov. 2008 - Mai 2010 </em>
+              <p><em><b>Coordonnateur</b>, Bureau de liaison avec les ONG, Mairie de Port-au-Prince. Nov. 2008 - Mai
+                  2010 </em>
               </p>
             </div>
             <div class="resume-item">
               <p><em>
-                <b>Technicien-Stagiaire</b>, Direction de l’Aménagement du Territoire et du développement régional et local (DATDRL), Ministère de la Planification et de la Coopération Externe (MPCE). Oct.-Déc. 2009 
-                 </em>
+                  <b>Technicien-Stagiaire</b>, Direction de l’Aménagement du Territoire et du développement régional et
+                  local (DATDRL), Ministère de la Planification et de la Coopération Externe (MPCE). Oct.-Déc. 2009
+                </em>
               </p>
             </div>
             <div class="resume-item">
               <p><em>
-                 <b> Directeur de Communication</b>, Association des Universitaires Capois pour l’Avancement et le Progrès
+                  <b> Directeur de Communication</b>, Association des Universitaires Capois pour l’Avancement et le
+                  Progrès
                   (AUCAP). 2006 – 2008</em>
               </p>
             </div>
@@ -683,60 +665,79 @@
 
       </div>
     </section><!-- End Resume Section -->
-    <section id="services" class="services">
-      <div class="container">
+    <section id="engagement" class="engagement py-5">
+      <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Engagements</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-            sit
-            in iste officiis commodi quidem hic quas.</p>
+          <h2>Engagement Citoyen</h2>
         </div>
 
-        <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <div class="icon"><i class="bi bi-briefcase"></i></div>
-            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-              occaecati cupiditate non provident</p>
+        <div class="content mb-5">
+          <div class="card shadow-sm mb-3">
+            <div class="card-body">
+              <h3 class="card-title">Vision de HD : Instaurer le progrès et le bien-être en Ayiti</h3>
+              <p class="card-text">Vivre dans une société équilibrée, harmonisée et pacifique, habiter un territoire
+                souverain, économiquement prospère et politiquement fort est un idéal légitime auquel chaque ayitien a
+                le droit d’aspirer. C’est précisément le nouveau crédo qui s’inspire de notre histoire de peuple la plus
+                lointaine, depuis ses jalons, et dont l’ambition est de provoquer l’élan vers la transformation
+                nationale.</p>
+              <p class="card-text">La vision d’une Ayiti riche s’arc-boute sur les valeurs qui font d’elle
+                incontestablement une grande nation. Tout d’abord, le monde est unanime à reconnaitre l’impact de la
+                proclamation de l’indépendance ayitienne dans l’histoire moderne et universelle, particulièrement sur
+                celle des peuples noirs. Cet événement et tout ce qui l’entoure représentent un moment inégalé et la
+                consécration d’un pays, aujourd’hui vieux de plus de deux siècles, riche en histoire et en patrimoine
+                culturel, avec de nombreux sites historiques et monuments importants tels que les citadelles, les forts
+                et les musées. Notre grandeur de peuple tient aussi de notre culture riche et diversifiée, avec des
+                influences africaines, européennes et américaines. Ensuite, Ayiti est un pays de qualité qui produit des
+                artistes parmi les plus brillants de tous les temps, tels que les peintres, les sculpteurs et les
+                musiciens. Cette qualité se prolonge jusque dans une cuisine qui se veut unique. Enfin, Ayiti est une
+                grande nation parce qu’elle est l’une des premières communautés modernes à faire de la solidarité et de
+                l’entraide un refrain officiel.</p>
+              <p class="card-text">Le rêve est osé. Mais il prend justification dans le potentiel multiple de notre
+                développement. Le but ultime du projet est d’instaurer le progrès et le bien-être en Ayiti sur la base
+                de l’inclusion. Il s’inspire dans une large mesure d’une pensée toute ayitienne forgée essentiellement
+                de sociologie politique et d’économie du bien-être à laquelle Edmond Paul, Anténor Firmin, Jean Price
+                Mars, Dantès Bellegarde, Leslie Manigat et bien d’autres ont consacré une bonne partie de leurs
+                réflexions.</p>
+              <p class="card-text">L’expression « ambition » ne semble pas appropriée comme titre aux premiers
+                balbutiements d’une vision qui continue de se développer de la manière la plus modeste. Nous devons
+                admettre qu’à ce carrefour, il ne nous reste qu’un ultime choix : celui d’allier l’intelligence à
+                l’intention au profit de la survie de la nation. Nous n’avons plus le privilège de l’ambition. Nous
+                sommes en face d’une obligation unique où le devoir et l’histoire nous ont donné rendez-vous.</p>
+            </div>
           </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="bi bi-card-checklist"></i></div>
-            <h4 class="title"><a href="">Dolor Sitema</a></h4>
-            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo
-              consequat tarad limino ata</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="bi bi-bar-chart"></i></div>
-            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="bi bi-binoculars"></i></div>
-            <h4 class="title"><a href="">Magni Dolores</a></h4>
-            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="bi bi-brightness-high"></i></div>
-            <h4 class="title"><a href="">Nemo Enim</a></h4>
-            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-              praesentium
-              voluptatum deleniti atque</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
-              soluta nobis est eligendi</p>
+        </div>
+
+        <div class="content">
+          <div class="card shadow-sm mb-3">
+            <div class="card-body">
+              <h3 class="card-title">Engagement politique et social</h3>
+              <p class="card-text">Depuis près de vingt (20) années, Herrick Dessources met son leadership au service de
+                la communauté ayitienne. Il est très engagé dans la vie associative et a déjà contribué à la création de
+                plusieurs organisations sociales.</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Co-fondateur et Président de l’organisation Leadership Ayitien pour une
+                  nouvelle société (LANS)</li>
+                <li class="list-group-item">Co-fondateur de l’Association des Universitaires Capois pour l’Avancement et
+                  le Progrès (AUCAP), 2005</li>
+                <li class="list-group-item">Co-fondateur du Groupe ECHO Haïti (GECH) : Président (13-14) et
+                  Vice-Président (12-13)</li>
+                <li class="list-group-item">Concepteur et animateur principal de l’émission “Woumble devlopman”,
+                  2011-2014</li>
+                <li class="list-group-item">Jeune Ambassadeur de la Francophonie des Amériques, Cohorte 2014</li>
+                <li class="list-group-item">International Visitor Leadership Program - 2016 (Global economic cooperation
+                  et revitalization)</li>
+              </ul>
+              <p class="card-text mt-3">Il est également entrepreneur, fondateur de deux entreprises : Agence
+                d’Investissement et de Développement d’Entreprises (AIDE) et la Plateforme Izibiznis. Avec AIDE
+                particulièrement, il participe activement à la construction et à l’éclosion d’un tissu et d’un
+                écosystème entrepreneuriaux solides.</p>
+            </div>
           </div>
         </div>
 
       </div>
-    </section>
+    </section><!-- End Engagement Section -->
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio section-bg">
       <div class="container">
@@ -891,7 +892,7 @@
 
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <img src="assets/img/contact.jpg" alt="" class="img-fluid">
+            <img src="assets/img/kontak.jpg" alt="" class="img-fluid">
             <!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
