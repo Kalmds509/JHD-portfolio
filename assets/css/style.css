@@ -872,6 +872,7 @@ section {
 --------------------------------------------------------------*/
 .contact {
   padding-bottom: 130px;
+  bottom: 0%;
 }
 
 .contact .info {

@@ -37,47 +37,20 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
   <style>
-    .activities-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-    }
+    
+    /* Définir la classe pour l'animation */
+.animate-grow {
+  transition: transform 0.3s ease;
+}
 
-    .activity {
-      display: none;
-      flex-grow: 1;
-      text-align: center;
-    }
+.animate-grow:hover {
+  transform: scale(1.1); /* Agrandit l'image à 110% */
+}
 
-    .activity.active {
-      display: block;
-    }
 
-    .nav-btn {
-      background-color: #f0f0f0;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-    }
-
-    .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%;
-      /* 16:9 */
-      height: 0;
-      overflow: hidden;
-      max-width: 100%;
-      background: #000;
-    }
-
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
+        
+       
+       
   </style>
 </head>
 
@@ -99,7 +72,8 @@
           <!-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
           <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
           <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
-          <a href="http://www.linkedin.com/in/herrick-dessources-852506245" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="http://www.linkedin.com/in/herrick-dessources-852506245" class="linkedin"><i
+              class="bx bxl-linkedin"></i></a>
         </div>
       </div>
     </div>
@@ -131,59 +105,56 @@
   </section><!-- End Hero -->
 
   <main id="main">
-    <section id="activities" class="container">
-      <div class="section-title">   <h2>Activités réalisées</h2></div>
+   
+  <section id="activities" class="container-fluid">
+    <div class="section-title">
+      <h2>Activités réalisées</h2>
+    </div>
+  <div id="carouselExampleDark" class="carousel carousel-dark slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active bg-white" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"  class="bg-white" aria-label="Slide 2"></button>
+      <!-- <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+    </div>
+    <div class="carousel-inner">
      
- 
-        <div class="activities-container">
-          <button class="nav-btn prev-btn" onclick="showPreviousActivity()">◀</button>
-          <div class="activity active">
-            <div class="video-wrapper">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/0q2_q3dPPsg" frameborder="0" allowfullscreen></iframe>
-            </div>
-           
-            <p>Le Directeur Exécutif de l'Agence d'Investissement et de Développement d'Entreprises (AIDE) partage dix informations importantes sur la première édition du projet CHAMPIONS. C'est un programme d'accompagnement pour le renforcement des capacités des MPME. La première cohorte réunit des femmes et jeunes entrepreneurs du Grand Nord.</p>
-          </div>
-          <button class="nav-btn next-btn" onclick="showNextActivity()">▶</button>
-          <div class="activity">
-            <div class="video-wrapper">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/qYB_awIR9-M" frameborder="0" allowfullscreen></iframe>
-            </div>
-            
-            <p>Le président de l’Agence d’Investissement et de Développement d’Entreprise John Herrick Dessources renouvelle son engagement de travailler pour la création d’entreprise durable et de richesse.
-              Un groupe de 2 cent entrepreneurs du secteur productif dans le nord et le nord-est du pays bénéficieront d’un appui spécial dans la mise en œuvre de ce protocole.
-              Suivez les déclarations du président de AIDE John  Herrick Dessources…</p>
-           
-          </div>
+      <div class="carousel-item active" data-bs-interval="10000">
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;background:#000;">
+          <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube.com/embed/0q2_q3dPPsg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-      
-      
+        <div class="carousel-caption d-none d-md-block text-light fw-bold">
+          <h5>Activité AIDE</h5>
+          <p>Le Directeur Exécutif de l'Agence d'Investissement et de Développement d'Entreprises (AIDE) partage dix informations importantes sur la première édition du projet CHAMPIONS.</p>
+        </div>
       </div>
-    </section>
-
-
-
-
-    <script>
-      function showNextActivity() {
-        const activities = document.querySelectorAll('.activity');
-        const activeIndex = Array.from(activities).findIndex(activity => activity.classList.contains('active'));
-        const nextIndex = (activeIndex + 1) % activities.length;
-        activities[activeIndex].classList.remove('active');
-        activities[nextIndex].classList.add('active');
-      }
-
-      function showPreviousActivity() {
-        const activities = document.querySelectorAll('.activity');
-        const activeIndex = Array.from(activities).findIndex(activity => activity.classList.contains('active'));
-        const prevIndex = (activeIndex - 1 + activities.length) % activities.length;
-        activities[activeIndex].classList.remove('active');
-        activities[prevIndex].classList.add('active');
-      }
-    </script>
+      <div class="carousel-item " >
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;background:#000;">
+          <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube.com/embed/qYB_awIR9-M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="carousel-caption d-none d-md-block text-light fw-bold">
+          <h5>Engagement</h5>
+          <p>Le président de l’Agence d’Investissement et de Développement d’Entreprise John Herrick Dessources renouvelle son engagement de travailler pour la création d’entreprise durable et de richesse.</p>
+        </div>
+      </div>
+      
+     
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+    
+    
+   
+ </section>
    
 
-
+ 
     <section id="about" class="about">
       <div class="container">
 
@@ -197,26 +168,44 @@
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/dessources.jpg" class="img-fluid" alt="">
+            <img src="assets/img/dessources.jpg" class="img-fluid animate-grow" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
 
 
             <p>
-              Herrick Dessources est un professionnel en Planification et en Économie, cumulant plus de quinze (15) années d’expérience, principalement dans la planification, la gestion, le suivi et l’évaluation de projets, ainsi que dans le développement des entreprises et du secteur privé.
+              Herrick Dessources est un professionnel en Planification et en Économie, cumulant plus de quinze (15)
+              années d’expérience, principalement dans la planification, la gestion, le suivi et l’évaluation de
+              projets, ainsi que dans le développement des entreprises et du secteur privé.
             </p>
             <p>
-              Actuellement, Monsieur Dessources poursuit une étude supérieure en sciences économiques, spécialisée en Économie du développement. Il a obtenu un Diplôme d’Études Supérieures (DES) en Économie Appliquée/ Option : Planification. Il a suivi une formation universitaire en Communication Sociale. Il détient des certifications en passation de marchés publics et en éthique de la recherche, et a participé à des programmes de renforcement des capacités.
+              Actuellement, Monsieur Dessources poursuit une étude supérieure en sciences économiques, spécialisée en
+              Économie du développement. Il a obtenu un Diplôme d’Études Supérieures (DES) en Économie Appliquée/ Option
+              : Planification. Il a suivi une formation universitaire en Communication Sociale. Il détient des
+              certifications en passation de marchés publics et en éthique de la recherche, et a participé à des
+              programmes de renforcement des capacités.
             </p>
             <p>
-              Son parcours est marqué par des rôles significatifs dans l’administration publique haïtienne, comprenant la gestion de projets publics et le développement du secteur privé. Il a notamment été Coordonnateur Général de l’Unité chargée de la Gestion des Micro Parcs Industriels au Ministère du Commerce et de l’Industrie. Son expérience avec le secteur public inclut la collaboration avec l’Ecole Hôtelière d’Haiti (EHH), les Ministères du Tourisme, de la Planification et de la Coopération Externe, de l’Économie et des Finances et un passage enrichissant à la Mairie de Port-au-Prince. 
+              Son parcours est marqué par des rôles significatifs dans l’administration publique haïtienne, comprenant
+              la gestion de projets publics et le développement du secteur privé. Il a notamment été Coordonnateur
+              Général de l’Unité chargée de la Gestion des Micro Parcs Industriels au Ministère du Commerce et de
+              l’Industrie. Son expérience avec le secteur public inclut la collaboration avec l’Ecole Hôtelière d’Haiti
+              (EHH), les Ministères du Tourisme, de la Planification et de la Coopération Externe, de l’Économie et des
+              Finances et un passage enrichissant à la Mairie de Port-au-Prince.
             </p>
             <p>
-              Herrick Dessources a des expériences de travail avec des organisations internationales, y compris la Banque Interaméricaine de Développement (BID), la Banque Mondiale (BM), l’USAID et l’Union Européenne (UE). Il possède également une solide expérience avec les ONG, notamment la World Vision International, MEDA, IDEJEN, CARE Haïti, CECI, Mercy Corps etc. 
+              Herrick Dessources a des expériences de travail avec des organisations internationales, y compris la
+              Banque Interaméricaine de Développement (BID), la Banque Mondiale (BM), l’USAID et l’Union Européenne
+              (UE). Il possède également une solide expérience avec les ONG, notamment la World Vision International,
+              MEDA, IDEJEN, CARE Haïti, CECI, Mercy Corps etc.
 
             </p>
             <p>
-              Il a également une expérience remarquable en tant que consultant, se spécialisant dans le développement d’entreprises, les études de terrain, la planification et la gestion stratégique. Il a dirigé des formations et a travaillé sur l’élaboration de plans d’affaires pour divers projets de développement. Ses contributions s’étendent au secteur éducatif, où il a soutenu l’amélioration de l’enseignement dans les métiers du tourisme
+              Il a également une expérience remarquable en tant que consultant, se spécialisant dans le développement
+              d’entreprises, les études de terrain, la planification et la gestion stratégique. Il a dirigé des
+              formations et a travaillé sur l’élaboration de plans d’affaires pour divers projets de développement. Ses
+              contributions s’étendent au secteur éducatif, où il a soutenu l’amélioration de l’enseignement dans les
+              métiers du tourisme
             </p>
           </div>
         </div>
@@ -229,7 +218,9 @@
 
         <div class="section-title">
           <h2>Compétences</h2>
-          <p> Monsieur Dessources a développé certaines compétences clé grâce à sa formation et à sa solide expérience. Ces compétences renforcent son profil et ses capacites combinant savoir et savoir-faire. Elles comprennent :</p>
+          <p> Monsieur Dessources a développé certaines compétences clé grâce à sa formation et à sa solide expérience.
+            Ces compétences renforcent son profil et ses capacites combinant savoir et savoir-faire. Elles comprennent :
+          </p>
         </div>
 
         <div class="row skills-content">
@@ -301,7 +292,9 @@
 
         <div class="row">
           <div class="container">
-            <div class="section-title"><h2>Formations</h2></div>
+            <div class="section-title">
+              <h2>Formations</h2>
+            </div>
           </div>
           <div class="col-lg-6" data-aos="fade-up">
             <div class="resume-item">
@@ -315,13 +308,13 @@
               <h4>Diplôme d’Etudes Supérieures en Economie Appliquée,Option:Planification</h4>
               <h5>Juin 2012</h5>
               <p><em>Centre de Techniques de Planification et d’Economie Appliquée (CTPEA) </em></p>
-              
+
             </div>
             <div class="resume-item">
               <h4>Etudes en Communication sociale</h4>
               <h5>Mar. 2005 – Juil. 2009 </h5>
               <p><em>Université d’Etat d’Haïti (UEH) – Faculté des Sciences Humaines (FASCH) </em></p>
-             
+
             </div>
 
           </div>
@@ -331,7 +324,7 @@
               <h4>Etudes secondaires</h4>
               <h5>1997 – 2003 </h5>
               <p><em>Collège Notre Dame du Perpétuel Secours (CNDPS) </em></p>
-              
+
             </div>
             <div class="resume-item">
               <h4>Séminaires</h4>
@@ -348,9 +341,11 @@
       <div class="container">
         <div class="row">
           <div class="container">
-            <div class="section-title"><h2>Expériences professionnelles</h2></div>
+            <div class="section-title">
+              <h2>Expériences professionnelles</h2>
+            </div>
           </div>
-          
+
           <div class="col-lg-6" data-aos="fade-up">
             <div class="resume-item">
               <p><em>Plus de quinze (15) années d’expérience professionnelle dans le domaine de la Planification.</em>
@@ -682,10 +677,10 @@
         </div>
         <div class="content">
           <div class="card shadow-sm mb-3">
-           
+
             <div class="card-body">
-             
-             
+
+
               <p class="card-text">Depuis près de vingt (20) années, Herrick Dessources met son leadership au service de
                 la communauté ayitienne. Il est très engagé dans la vie associative et a déjà contribué à la création de
                 plusieurs organisations sociales.</p>
@@ -718,7 +713,7 @@
 
         <div class="section-title">
           <h2>Publications</h2>
-          
+
         </div>
 
         <!-- <div class="row" data-aos="fade-up">
@@ -731,7 +726,7 @@
             </ul>
           </div>
         </div> -->
-<!-- 
+        <!-- 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
@@ -835,48 +830,67 @@
 
         </div> -->
         <div class="row">
-
           <!-- Publication 1 -->
-          <div class="col-lg-6">
-            <div class="publication">
-              <img src="assets/img/manioc.jpg" alt="Publication 1" class="img-fluid">
-              <h3>Analyse filière manioc</h3>
-        <p>Cette publication fournit une analyse complète de la filière manioc, en examinant les méthodes de production, les défis et les opportunités pour les producteurs de manioc. Le document explore également les marchés potentiels et les perspectives de croissance pour cette culture essentielle.</p>
-              <a href="assets/documents/Bulletin20202021_No1_Analyse filiere manioc.pdf" download class="btn btn-primary">Visualiser et télécharger le document</a>
+          <div class="col-lg-6 col-sm-12 col-md-6">
+            <div class="card accordion accordion-flush" id="accordionFlushExample1">
+              <img src="assets/img/manioc.jpg" class="card-img-top animate-grow" alt="...">
+              <div class="card-body">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Analyse filière manioc
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample1">
+                    <div class="accordion-body">
+                      <p class="card-text">
+                        Cette publication fournit une analyse complète de la filière manioc, en examinant les méthodes de production, les défis et les opportunités pour les producteurs de manioc. Le document explore également les marchés potentiels et les perspectives de croissance pour cette culture essentielle.
+                      </p>
+                      <a href="assets/documents/Bulletin20202021_No1_Analyse filiere manioc.pdf" download class="btn btn-primary">Télécharger</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-    
+        
           <!-- Publication 2 -->
-          <div class="col-lg-6">
-            <div class="publication">
-              <img src="assets/img/financement.jpg" alt="Publication 2" class="img-fluid">
-              <h3>Mécanisme de financement d'entreprise</h3>
-              <p>Cette publication explore les différents mécanismes de financement disponibles pour les entreprises. Elle couvre les options de financement traditionnelles et alternatives, fournissant des conseils pratiques pour les entrepreneurs cherchant à obtenir des fonds pour démarrer ou développer leur entreprise.</p>
-              <a href="assets/documents/Diagnostic sommaire des mecanismes de financement des entreprises en Haiti.pdf" download class="btn btn-primary">Visualiser et télécharger le document</a>
+          <div class="col-lg-6 col-sm-12 col-md-6">
+            <div class="card accordion accordion-flush" id="accordionFlushExample2">
+              <img src="assets/img/financement.jpg" class="card-img-top animate-grow" alt="...">
+              <div class="card-body">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Mécanisme d'entrepreneur
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample2">
+                    <div class="accordion-body">
+                      <p class="card-text">
+                        Cette publication explore les différents mécanismes de financement disponibles pour les entreprises. Elle couvre les options de financement traditionnelles et alternatives, fournissant des conseils pratiques pour les entrepreneurs afin d'agrandir leur entreprise.
+                      </p>
+                      <a href="assets/documents/Diagnostic sommaire des mecanismes de financement des entreprises en Haiti.pdf" download class="btn btn-primary">Télécharger</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-    
         </div>
+        
+        
 
       </div>
     </section><!-- End Portfolio Section -->
 
-    <!-- ======= Services Section ======= -->
-
-    <!--
-       End Services Section -->
-
-
-
-
-
-    <!-- ======= Contact Section ======= -->
+  <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
 
         <div class="section-title">
           <h2>Contact</h2>
-          
+
         </div>
 
         <div class="row" data-aos="fade-in">
@@ -927,7 +941,7 @@
 
 
               </div>
-            
+
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Appel:</h4>
